@@ -57,13 +57,13 @@ var scene = (function () {
     }
 
     function onDocumentMouseMove(event) {
-        mouseX = ( event.clientX - windowHalfX ) * 10;
-        mouseY = ( event.clientY - windowHalfY ) * 10;
+        mouseX = (event.clientX - windowHalfX) * 10;
+        mouseY = (event.clientY - windowHalfY) * 10;
     }
 
     function render() {
-        camera.position.x += ( mouseX - camera.position.x ) * .05;
-        camera.position.y += ( -mouseY - camera.position.y ) * .05;
+        camera.position.x += (mouseX - camera.position.x) * .05;
+        camera.position.y += (-mouseY - camera.position.y) * .05;
         camera.lookAt(scene.position);
 
         var currentSeconds = Date.now();

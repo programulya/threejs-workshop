@@ -28,8 +28,11 @@ var scene = (function () {
 
         var loader = new THREE.JSONLoader();
 
-        loader.load("monkey.json", function (geometry, mat) {
-            var material = new THREE.MeshFaceMaterial(mat);
+        loader.load("monkey.json", function (geometry) {
+            var material = new THREE.MeshBasicMaterial({
+                color: 0xC91A58,
+                wireframe: true
+            });
 
             monkey = new THREE.Mesh(geometry, material);
 

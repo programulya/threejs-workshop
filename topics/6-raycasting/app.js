@@ -6,7 +6,7 @@ var scene = (function () {
     "use strict";
 
     var scene = new THREE.Scene(),
-        renderer = new THREE.WebGLRenderer(),
+        renderer = new THREE.WebGLRenderer({alpha: true}),
         light = new THREE.AmbientLight(0xffffff),
         mouse = new THREE.Vector2(),
         raycaster = new THREE.Raycaster(),
@@ -17,7 +17,6 @@ var scene = (function () {
 
     function initScene() {
         renderer.setSize(window.innerWidth, window.innerHeight);
-
         document.getElementById("container").appendChild(renderer.domElement);
 
         scene.add(light);

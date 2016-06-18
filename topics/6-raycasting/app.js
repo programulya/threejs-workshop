@@ -6,7 +6,7 @@ var scene = (function () {
     "use strict";
 
     var scene = new THREE.Scene(),
-        renderer = new THREE.WebGLRenderer({alpha: true}),
+        renderer = new THREE.WebGLRenderer(),
         light = new THREE.AmbientLight(0xffffff),
         mouse = new THREE.Vector2(),
         raycaster = new THREE.Raycaster(),
@@ -17,6 +17,7 @@ var scene = (function () {
 
     function initScene() {
         renderer.setSize(window.innerWidth, window.innerHeight);
+
         document.getElementById("container").appendChild(renderer.domElement);
 
         scene.add(light);
@@ -31,18 +32,17 @@ var scene = (function () {
         camera.position.z = 150;
         scene.add(camera);
 
-        sphere = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16), new THREE.MeshBasicMaterial({
-            color: 0xff0000,
-            wireframe: true
-        }));
+        sphere = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16),
+            new THREE.MeshBasicMaterial({
+                color: 0xff0000, wireframe: true
+            }));
 
         sphere.position.set(-25, 0, 0);
 
         objects.push(sphere);
 
         sphere2 = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16), new THREE.MeshBasicMaterial({
-            color: 0x00ff00,
-            wireframe: true
+            color: 0x00ff00, wireframe: true
         }));
 
         sphere2.position.set(25, 0, 0);

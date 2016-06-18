@@ -24,7 +24,7 @@ var scene = (function () {
         );
 
         camera.position.z = 150;
-        camera.rotation.z = -40;
+        camera.rotation.z = 10;
 
         scene.add(camera);
 

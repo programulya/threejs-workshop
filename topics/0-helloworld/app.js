@@ -44,7 +44,6 @@ var scene = (function () {
     function render() {
         box.rotation.x += 0.01;
         box.rotation.y += 0.01;
-        box.rotation.y += 0.01;
 
         renderer.render(scene, camera);
         requestAnimationFrame(render);

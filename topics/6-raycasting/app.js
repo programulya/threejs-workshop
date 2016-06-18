@@ -32,8 +32,9 @@ var scene = (function () {
         camera.position.z = 150;
         scene.add(camera);
 
-        sphere = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16), new THREE.MeshBasicMaterial({
-            color: 0xff0000
+        sphere = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16),
+            new THREE.MeshBasicMaterial({
+            color: 0xff0000, wireframe: true
         }));
 
         sphere.position.set(-25, 0, 0);
@@ -41,7 +42,7 @@ var scene = (function () {
         objects.push(sphere);
 
         sphere2 = new THREE.Mesh(new THREE.SphereGeometry(20, 16, 16), new THREE.MeshBasicMaterial({
-            color: 0x00ff00
+            color: 0x00ff00, wireframe: true
         }));
 
         sphere2.position.set(25, 0, 0);

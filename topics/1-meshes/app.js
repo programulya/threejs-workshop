@@ -69,8 +69,8 @@ var scene = (function () {
 
     function render() {
         for (var i = 0; i < itemsToRotate.length; i++) {
-            itemsToRotate[i].rotation.y += 0.03;
             itemsToRotate[i].rotation.x += 0.03;
+            itemsToRotate[i].rotation.y += 0.03;
             itemsToRotate[i].rotation.z += 0.03;
         }
 

@@ -1,7 +1,3 @@
-/**
- * Created by programulya on 6/16/16.
- */
-
 var scene = (function () {
     "use strict";
 
@@ -24,7 +20,6 @@ var scene = (function () {
         );
 
         camera.position.z = 150;
-        camera.rotation.z = 10;
 
         scene.add(camera);
 

@@ -1,21 +1,14 @@
-/**
- * Created by programulya on 6/16/16.
- */
-
 var scene = (function () {
     "use strict";
 
     var scene = new THREE.Scene(),
         renderer = window.WebGLRenderingContext ? new THREE.WebGLRenderer({alpha: true}) : new THREE.CanvasRenderer(),
-        light = new THREE.AmbientLight(0xffffff),
         camera,
         box;
 
     function initScene() {
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.getElementById("container").appendChild(renderer.domElement);
-
-        scene.add(light);
 
         camera = new THREE.PerspectiveCamera(
             35,
@@ -26,6 +19,7 @@ var scene = (function () {
         camera.position.x = 10;
         camera.position.y = 5;
         camera.position.z = 100;
+
         scene.add(camera);
 
         box = new THREE.Mesh(

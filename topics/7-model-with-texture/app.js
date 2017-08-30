@@ -1,7 +1,3 @@
-/**
- * Created by programulya on 6/16/19.
- */
-
 var scene = (function () {
     "use strict";
 

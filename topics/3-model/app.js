@@ -1,20 +1,13 @@
-/**
- * Created by programulya on 6/16/16.
- */
-
 var scene = (function () {
     "use strict";
 
     var scene = new THREE.Scene(),
         renderer = new THREE.WebGLRenderer({alpha: true}),
-        light = new THREE.AmbientLight(0xffffff),
         camera, monkey;
 
     function initScene() {
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.getElementById("container").appendChild(renderer.domElement);
-
-        scene.add(light);
 
         camera = new THREE.PerspectiveCamera(
             35,

@@ -1,2 +1,2 @@
 # Three.js workshop
-Some examples with Three.js for kottans.org workshop.
+Some examples with for Three.js workshop.

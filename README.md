@@ -1,2 +1,2 @@
 # Three.js workshop
-Some examples with for Three.js workshop.
+Some examples for Three.js workshop.
